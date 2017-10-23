@@ -1,0 +1,60 @@
+html, body {
+    height: 100%;
+    margin: 0px;
+}
+/* On créer une structure telle que 2 pages puissent être cote à cote
+sans que la seconde soit visible  */
+/*
+
+Le container dépasse de wrapper (width: 200%).
+L'utilisateur vois seulement wrapper, donc uniquement la page1
+
+***wrapper*******
+                *
+                *
+***********container**************
+****page1*****  * ****page2***** *
+*            *  * *            * *
+*            *  * *            * *
+*            *  * *            * *
+*            *  * *            * *
+**************  * ************** * 
+********************************
+                *
+                *
+*****************              
+*/
+.wrapper{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.container {
+    height: 100%;
+    width: 200%;
+    display: flex;
+}
+.page{
+    height: 100%;
+    width: 100%;
+}
+.red{
+    background-color: rgb(236, 91, 6);
+}
+.purple {
+    background-color: rgb(141, 2, 141);
+}
+.green{
+    background-color: green;
+}
+nav{
+    position: fixed;
+    left: 10px;
+}
+ul{
+    list-style: none;
+}
+.animation{
+    transform: translateX( -100% );
+    transition: transform 500ms;
+}
